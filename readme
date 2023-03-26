@@ -1,1 +1,38 @@
-readme
+You are expected to perform a simple classification problem - that of labelling emails as spam or non-spam, based on their content in terms of words. The dataset has been taken from UCI Machine learning repository (https://archive.ics.uci.edu/ml/datasets/Spambase). This must be achieved using two machine learning models based on K Nearest Neighbors (KNN) and Decision Trees.
+
+--------------- Data set ------------------
+
+The Spambase dataset is a collection of email messages that have been pre-processed and transformed into a set of numerical features, with the goal of distinguishing between spam and non-spam (also known as "ham") messages. The dataset was created by researchers at Hewlett-Packard Labs and was first made available on the UCI Machine Learning Repository in 1999.
+
+The dataset contains a total of 4,601 email messages, of which 1,813 are labeled as spam (39.4% of the dataset) and 2,788 are labeled as non-spam (60.6% of the dataset). Each email message is represented by a set of 57 features, which include things like the frequency of certain words, the length of the message, and the presence of certain characters.
+
+Some of the features have been pre-processed to remove any identifying information, such as email addresses and URLs. The dataset also includes a class label indicating whether each email is spam or non-spam.
+
+The Spambase dataset has been widely used as a benchmark for evaluating the performance of different machine learning algorithms in detecting spam email messages. It is a useful resource for researchers and practitioners who are interested in developing and testing new approaches for spam detection.
+
+
+Attribute Information:
+
+The last column of 'spambase.data' denotes whether the e-mail was considered spam (1) or not (0), i.e. unsolicited commercial e-mail. Most of the attributes indicate whether a particular word or character was frequently occuring in the e-mail. The run-length attributes (55-57) measure the length of sequences of consecutive capital letters. For the statistical measures of each attribute, see the end of this file. Here are the definitions of the attributes:
+
+48 continuous real [0,100] attributes of type word_freq_WORD = percentage of words in the e-mail that match WORD, i.e. 100 * (number of times the WORD appears in the e-mail) / total number of words in e-mail. A "word" in this case is any string of alphanumeric characters bounded by non-alphanumeric characters or end-of-string.
+
+6 continuous real [0,100] attributes of type char_freq_CHAR] = percentage of characters in the e-mail that match CHAR, i.e. 100 * (number of CHAR occurences) / total characters in e-mail
+
+1 continuous real [1,...] attribute of type capital_run_length_average = average length of uninterrupted sequences of capital letters
+
+1 continuous integer [1,...] attribute of type capital_run_length_longest = length of longest uninterrupted sequence of capital letters
+
+1 continuous integer [1,...] attribute of type capital_run_length_total = sum of length of uninterrupted sequences of capital letters = total number of capital letters in the e-mail
+
+1 nominal {0,1} class attribute of type spam = denotes whether the e-mail was considered spam (1) or not (0), i.e. unsolicited commercial e-mail.
+
+Summary The Spambase Data Set contains a collection of email messages, where each message is classified as either spam or non-spam (ham). The data set contains 4,601 instances and 57 attributes, which can be categorized into three groups:
+
+Word frequency features (48 attributes) The first 48 attributes represent the percentage of words in the email that match a particular word or set of words. These attributes are based on alist of 3,870 commonly occurring words and characters in email messages. Each attribute corresponds to the frequency of occurrence of a particular word or set of words in the email message.
+
+Character frequency features (6 attributes) The next six attributes represent the percentage of characters in the email that match a particular character or set of characters. These attributes are based on the same list of characters as the word frequency features.
+
+Other features (3 attributes) The last three attributes represent other features of the email message, including the length of the longest uninterrupted sequence of capital letters, the total length of the email message, and the frequency of exclamation marks.
+
+The target variable is the class attribute, which is either 1 (spam) or 0 (non-spam).
